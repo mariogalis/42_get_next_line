@@ -6,7 +6,7 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:12:25 by magonzal          #+#    #+#             */
-/*   Updated: 2022/02/24 20:47:47 by magonzal         ###   ########.fr       */
+/*   Updated: 2022/02/28 18:18:35 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	while (i <= len1 + len2)
 		str[i++] = s2[j++];
-	free((char) *s1);
+	free((void *) s1);
 	return (str);
 }
 
