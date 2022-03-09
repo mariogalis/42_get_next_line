@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:12:27 by magonzal          #+#    #+#             */
-/*   Updated: 2022/02/28 18:36:50 by magonzal         ###   ########.fr       */
+/*   Updated: 2022/03/08 18:31:53 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# define BUFFER_SIZE 3
+# define BUFFER_SIZE 4
 # include <unistd.h>
 # include <stdio.h>
 # include <fcntl.h>

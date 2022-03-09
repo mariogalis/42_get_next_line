@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mario <mario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:12:25 by magonzal          #+#    #+#             */
-/*   Updated: 2022/03/02 14:57:18 by magonzal         ###   ########.fr       */
+/*   Updated: 2022/03/08 11:56:37 by mario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (!str)
 		return (NULL);
-	while (s1[i])
+	while (i < len1)
 	{
 		str[i] = s1[i];
 		i++;
 	}
-	while (s2[j])
+	while (i <= len1 + len2)
 		str[i++] = s2[j++];
-	str[i] = 0;
+	free((void *) s1);
 	return (str);
 }
 
@@ -76,8 +76,6 @@ char	*ft_strchr(const char *str, int c)
 	int	i;
 
 	i = 0;
-	if (!str)
-		return (NULL);
 	while (str[i])
 	{
 		if (str[i] == (unsigned char)c)
