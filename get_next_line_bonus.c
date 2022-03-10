@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:12:22 by magonzal          #+#    #+#             */
-/*   Updated: 2022/03/10 18:42:50 by magonzal         ###   ########.fr       */
+/*   Updated: 2022/03/10 19:57:06 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_goodline(char *gline)
 {
@@ -97,16 +97,16 @@ char *ft_read(int fd, char *goodline, char *todo)
 
 char	*get_next_line(int fd)
 {
-	static char	*todo = NULL;
+	static char	*todo[OPEN_MAX];
 	char		*goodline;
 
-	if (BUFFER_SIZE <= 0 || fd < 0 || fd > 1000)
+	if (BUFFER_SIZE <= 0 || fd < 0 || fd > OPEN_MAX)
 		return (NULL);
 	goodline = malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if(!goodline)
 		return(NULL);
-	todo = ft_read(fd, goodline, todo);
-	goodline = ft_goodline(todo);
-	todo = ft_restline(todo);
+	todo[fd] = ft_read(fd, goodline, todo[fd]);
+	goodline = ft_goodline(todo[fd]);
+	todo[fd] = ft_restline(todo[fd]);
 	return (goodline);
 }
