@@ -6,7 +6,7 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:12:25 by magonzal          #+#    #+#             */
-/*   Updated: 2022/03/09 20:09:52 by magonzal         ###   ########.fr       */
+/*   Updated: 2022/03/10 20:48:41 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ size_t	ft_strline(char *str)
 		count++;
 		str++;
 	}
-	if(*str == '\n')
+	if (*str == '\n')
 		count++;
 	return (count);
 }

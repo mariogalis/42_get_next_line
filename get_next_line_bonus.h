@@ -6,7 +6,7 @@
 /*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:12:27 by magonzal          #+#    #+#             */
-/*   Updated: 2022/03/10 19:08:39 by magonzal         ###   ########.fr       */
+/*   Updated: 2022/03/10 20:17:49 by magonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <limits.h>
-
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *str);
